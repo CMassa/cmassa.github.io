@@ -4,7 +4,7 @@
 
 @mixin light-scheme {
   /* Framework color */
-  --main-bg: white;
+  --main-bg: rgb(223, 223, 223);
   --mask-bg: #c1c3c5;
   --main-border-color: #f3f3f3;
 
@@ -38,21 +38,21 @@
   );
 
   /* Sidebar */
-  --site-title-color: rgb(113, 113, 113);
-  --site-subtitle-color: #717171;
-  --sidebar-bg: #f6f8fa;
-  --sidebar-border-color: #efefef;
-  --sidebar-muted-color: #545454;
-  --sidebar-active-color: #1d1d1d;
-  --sidebar-hover-bg: rgb(223, 233, 241, 0.64);
+  --site-title-color: #000000;
+  --site-subtitle-color: #000000;
+  --sidebar-bg: #b17300;
+  --sidebar-border-color: #ff7b00;
+  --sidebar-muted-color: #000000;
+  --sidebar-active-color: #000000;
+  --sidebar-hover-bg: rgba(255, 255, 255, 0.50);
   --sidebar-btn-bg: white;
-  --sidebar-btn-color: #8e8e8e;
+  --sidebar-btn-color: #000000;
   --avatar-border-color: white;
 
   /* Topbar */
-  --topbar-bg: rgb(255, 255, 255, 0.7);
+  --main-bg: rgb(223, 223, 223);
   --topbar-text-color: rgb(78, 78, 78);
-  --search-border-color: rgb(240, 240, 240);
+  --search-border-color: rgb(75, 75, 75);
   --search-icon-color: #c2c6cc;
   --input-focus-border-color: #b8b8b8;
 
