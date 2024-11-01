@@ -3,7 +3,16 @@ icon: fas fa-key
 order: 5
 ---
 
-```
+### 🔐 Contact me securely with PGP
+
+
+
+#### 🗝️ Public PGP Key
+
+**Key ID:** `0x3C8B7EB9`
+**Fingerprint:** `F116 2F03 8631 949D 26A7  DE83 1BEE B17C 3C8B 7EB9`
+
+```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGchZ/oBEADecQ2muANMRZnQK3gBzBMctSeMT4oFF3msoPLycklWK7HV96N7
