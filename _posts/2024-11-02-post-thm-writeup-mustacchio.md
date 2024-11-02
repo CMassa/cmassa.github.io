@@ -8,7 +8,7 @@ tags: [thm, xxe]
 
 ![banner](../assets/img/posts/2024-11-02-post-thm-writeup-mustacchio/banner.png)
 
-The Mustacchio machine on TryHackMe is an easy-difficulty challenge that requires a blend of web exploitation, cryptographic cracking, and Linux privilege escalation techniques. The journey begins with fuzzing found webs on port scanning to discover hidden directories and endpoints, which lead to crucial data for cracking password hashes. With the cracked credentials in hand, the next step is to exploit an XXE (XML External Entity) vulnerability to retrieve an SSH key pair, providing the initial foothold on the machine.
+[Mustacchio](https://tryhackme.com/room/mustacchio) machine on [TryHackMe](https://tryhackme.com/) is an easy-difficulty challenge that requires a blend of web exploitation, cryptographic cracking, and Linux privilege escalation techniques. The journey begins with fuzzing found webs on port scanning to discover hidden directories and endpoints, which lead to crucial data for cracking password hashes. With the cracked credentials in hand, the next step is to exploit an XXE (XML External Entity) vulnerability to retrieve an SSH key pair, providing the initial foothold on the machine.
 
 From there, privilege escalation is achieved by leveraging a binary with the SUID bit set. By analyzing the SUID binary strings, we discover that a known binary is called without using an absolute path. This allows us to hijack the execution by placing our own version of the binary earlier in the PATH, gaining root privileges and full system control.
 
