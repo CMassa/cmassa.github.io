@@ -10,7 +10,7 @@ tags: [thm]
   <img src="../assets/img/posts/2024-11-13-thm-writeup-pyrat/banner.png" width="300" alt="banner">
 </p>
 
-[Pyrat](https://tryhackme.com/r/room/pyrat) machine on [TryHackMe](https://tryhackme.com/) is a boot2root machine which exposes an HTTP server on a concrete port
+[Pyrat](https://tryhackme.com/r/room/pyrat) machine on [TryHackMe](https://tryhackme.com/) is a boot2root machine which exposes an HTTP server on a concrete port.
 By crafting a specific payload, we gain initial shell access on the target machine. While exploring the file structure, we find a repository with credentials. Digging deeper reveals important details about an older application version. Using custom scripts and brute-forcing techniques, we eventually discover a critical endpoint. From there, we retrieve an admin password, ultimately granting us root access to the system.
 
 
@@ -125,6 +125,7 @@ linpeas.sh          100%[===================>] 808.34K  --.-KB/s    in 0.004s
 
 www-data@Pyrat:/tmp$ chmod u+x linpeas.sh
 chmod u+x linpeas.sh
+./linpeas.sh
 
 ```
 While reviewing the results from linpeas, we notice a user named `think`.
