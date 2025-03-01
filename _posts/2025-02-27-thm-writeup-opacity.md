@@ -174,7 +174,7 @@ www-data@opacity:/$
 
 But being `www-data` we cannot read the flag
 
-![alt text]../assets/img/posts/2025-02-27-thm-writeup-opacity/(image-7.png)
+![alt text](../assets/img/posts/2025-02-27-thm-writeup-opacity/image-7.png)
 
 After inspecing filesystem for some time we found `dataset.kdbx` under `/opt` directory, which is a keepass database file:
 
