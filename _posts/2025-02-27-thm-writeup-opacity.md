@@ -338,8 +338,6 @@ Yikes! We found the missing piece, `script.php` is being executed by `root`!
 
 Finding means that our changed `backup.inc.php` file should be already being executed. So all indicates that if we run a listener on port 5555 we should be getting root reverse shell due to file being run as `root` user and be able to get the flag.
 
-Since `script.php` runs as `root`, our modified `backup.inc.php` should already be executing. Everything points to the fact that if we set up a listener on port 5555, we should receive a root reverse shell which will grant us access as `root` and hence to proof flag
-
 *Note: After inspecting pspy output for some time it looks like runs are being made every 5 minutes. So shell would pop after that time passes by.*
 
 ```bash
