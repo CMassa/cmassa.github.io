@@ -16,9 +16,9 @@ For privilege escalation, we discover a service running on a port that’s only 
 ## Info
 
 |------------------|----------------------------|
-| **Name**         | Cypher                      |
+| **Name**         | Nocturnal                  |
 | **OS**           | Linux                      |
-| **Difficulty**   | Easy   🟢                  |
+| **Difficulty**   | Easy   🟢                 |
 
 ## Port scanning
 
